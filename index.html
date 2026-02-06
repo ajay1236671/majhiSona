@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <title>आपला वाढदिवस ❤️</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Inter', sans-serif;
+      overflow: hidden;
+    }
+
+    .card {
+      width: 90%;
+      max-width: 420px;
+      background: rgba(255,255,255,0.25);
+      backdrop-filter: blur(15px);
+      border-radius: 20px;
+      padding: 40px 30px;
+      text-align: center;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+      animation: fadeFloat 0.9s ease;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #2c2c2c;
+    }
+
+    p {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: #333;
+    }
+
+    button {
+      margin-top: 30px;
+      padding: 12px 28px;
+      border: none;
+      border-radius: 30px;
+      font-size: 1rem;
+      cursor: pointer;
+      background: #e75480;
+      color: white;
+      animation: pulse 2.5s infinite;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    #no {
+      background: #999;
+      position: absolute;
+      animation: none;
+    }
+
+    img {
+      width: 180px;
+      border-radius: 15px;
+      margin: 25px 0;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+      animation: slowZoom 6s ease-in-out infinite alternate;
+    }
+
+    .couple-img {
+      width: 100%;
+      max-width: 260px;
+      border-radius: 18px;
+      margin: 25px auto;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+      animation: slowZoom 7s ease-in-out infinite alternate;
+    }
+
+    .hidden { display: none; }
+
+    @keyframes fadeFloat {
+      from { opacity: 0; transform: translateY(20px) scale(0.98); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 rgba(231,84,128,0.5); }
+      50% { box-shadow: 0 0 18px rgba(231,84,128,0.6); }
+      100% { box-shadow: 0 0 0 rgba(231,84,128,0.5); }
+    }
+
+    @keyframes slowZoom {
+      from { transform: scale(1); }
+      to { transform: scale(1.05); }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- PAGE 1 -->
+  <div class="card" id="page1">
+    <h1>एक छोटासा प्रश्न… 😌</h1>
+    <p>Sonali, खरं सांग…<br>तू तुझ्या नवऱ्यावर प्रेम करतेस का??</p>
+
+    <button id="yes">हो ना ❤️</button>
+    <button id="no">नाही</button>
+  </div>
+
+  <!-- PAGE 2 -->
+  <div class="card hidden" id="page2">
+    <h1>Good Decision 😎❤️</h1>
+    <img src="me.jpg" alt="Me">
+    <p>
+      हुशार आहेस 😄<br>
+      "हो" वर क्लिक केलंस म्हणजे<br>
+      आज तरी भांडण नाही!<br><br>
+      पण खरंच Sona,<br>
+      मला सहन केल्याबद्दल धन्यवाद 😂<br>
+      आणि तरीही माझ्यावर प्रेम केल्याबद्दल<br>
+      extra धन्यवाद ❤️
+    </p>
+    <button onclick="next(3)">पुढे</button>
+  </div>
+
+  <!-- PAGE 3 -->
+  <div class="card hidden" id="page3">
+    <h1>आपण दोघं 🌿</h1>
+
+    <img src="us1.jpg" alt="Us together" class="couple-img">
+
+    <p>
+      प्रेम म्हणजे फक्त फोटो काढणं<br>
+      किंवा मोठे प्लॅन नाहीत.<br><br>
+      भांडण करून पुन्हा हसणं,<br>
+      उगाचच चिडवणं,<br>
+      आणि थकलेल्या दिवशी<br>
+      "मी आहे" एवढंच म्हणणं —<br><br>
+      Sona, तुझ्यासोबत आयुष्य<br>
+      जास्त मजेशीर,<br>
+      जास्त शांत,<br>
+      आणि खूपच आपलंसं वाटतं.
+    </p>
+
+    <button onclick="next(4)">शेवटचं ❤️</button>
+  </div>
+
+  <!-- PAGE 4 -->
+  <div class="card hidden" id="page4">
+    <h1>माझं वचन 💍</h1>
+
+    <img src="us2.jpg" alt="Forever us" class="couple-img">
+
+    <p>
+      Sona, मी परफेक्ट नवरा नाही हे मान्य 😄<br>
+      पण एक गोष्ट नक्की —<br><br>
+      मी तुला रोज निवडेन.<br>
+      तुझा आदर करेन.<br>
+      आणि चांगल्या-वाईट सगळ्या दिवसांत<br>
+      तुझ्या बाजूला उभा राहीन.<br><br>
+      कारण आयुष्य सुंदर आहे<br>
+      फक्त तुझ्यासोबत ❤️<br><br>
+      आपल्या वाढदिवसाच्या खूप खूप शुभेच्छा 😘
+    </p>
+  </div>
+
+  <script>
+    const noBtn = document.getElementById("no");
+    const yesBtn = document.getElementById("yes");
+
+    function moveNoFar() {
+      const x = (Math.random() * 600) - 300;
+      const y = (Math.random() * 500) - 250;
+      noBtn.style.transform = `translate(${x}px, ${y}px) rotate(${Math.random()*20 - 10}deg)`;
+    }
+
+    document.addEventListener("mousemove", (e) => {
+      const rect = noBtn.getBoundingClientRect();
+      const btnX = rect.left + rect.width / 2;
+      const btnY = rect.top + rect.height / 2;
+      const distance = Math.hypot(e.clientX - btnX, e.clientY - btnY);
+
+      if (distance < 140) {
+        moveNoFar();
+      }
+    });
+
+    noBtn.addEventListener("touchstart", (e) => {
+      e.preventDefault();
+      moveNoFar();
+    });
+
+    noBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      moveNoFar();
+    });
+
+    yesBtn.addEventListener("click", () => next(2));
+
+    function next(n) {
+      document.querySelectorAll('.card').forEach(c => c.classList.add('hidden'));
+      document.getElementById(`page${n}`).classList.remove('hidden');
+    }
+  </script>
+
+</body>
+</html>
